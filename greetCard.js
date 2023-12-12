@@ -15,7 +15,7 @@ class GreetCard extends Component {
         </div>
         <div className='cardInside'>
           <h3 className='back'>Happy Birthday to You!</h3>
-          <p className='wish'>Dear love,</p>
+          <p className='wish'>Dear,</p>
           <p className='wish'>
             Happy birthday!! I hope your day is filled with lots of love and laughter! May all of your birthday wishes come true.
           </p>
