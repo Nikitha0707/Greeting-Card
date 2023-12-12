@@ -1,0 +1,171 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #073b4c;
+}
+
+.birthdayCard{
+  position: relative;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+}
+
+.birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+  0 10px 100px rgba(0, 0, 0, 0.5) ;
+}
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy {
+  visibility: hidden;
+}
+
+.cardFront{
+  position: relative;
+  background-color: #fff;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+  30px 0 50px rgba(0, 0, 0, 0.4);
+  transition: 0.6s;
+}
+.happy{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 30px;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  transition: 0.1s;
+  backface-visibility: visible;
+}
+
+.balloons{
+  position: absolute;
+}
+.balloonsOne,
+.balloonsTwo,
+.balloonsThree,
+.balloonsFour {
+  position: absolute;
+  width: 85px;
+  height: 95px;
+  border-radius: 50%;
+}
+
+.balloonsOne{
+  background-color: rgb(239, 71, 111, 0.7);
+  left: -10px;
+  top: 50px;
+}
+
+.balloonsTwo{
+  background-color:  #d6cf06; 
+  left : 50px;
+  top: 20px;
+
+}
+
+.balloonsThree{
+  background-color: rgba(250, 102, 255, 0.7); 
+  left : 110px;
+  top: 50px;
+  
+}
+
+.balloonsFour{
+  background-color: rgb(17, 138, 178, 0.7); 
+  left : 170px;
+  top: 20px;
+  
+}
+
+.balloonsOne::before,
+.balloonsTwo::before,
+.balloonsThree::before,
+.balloonsFour::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 155px;
+  background-color: #ffd166;
+  top: 95px;
+  left: 43px;
+}
+
+.balloonsOne::after,
+.balloonsTwo::after,
+.balloonsThree::after,
+.balloonsFour::after {
+  content: "";
+  position: absolute;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  top: 94px;
+  left: 37px;
+}
+
+.balloonsOne::after{
+  border-bottom: 10px solid #ef476f;
+
+}
+
+.balloonsTwo::after{
+  border-bottom: 10px solid #d6cf06;
+}
+
+.balloonsThree::after{
+  border-bottom: 10px solid rgba(250, 102, 255, 0.7);
+}
+
+.balloonsFour::after{
+  border-bottom: 10px solid #118ab2;
+}
+
+.cardInside {
+  position: absolute;
+  background-color: #fff;
+  width: 250px;
+  height: 350px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2); ;
+}
+
+p{
+  font-family: "Brush Script MT", cursive;
+  margin: 40px;
+  color: #333;
+
+}
+.name{
+  position: absolute;
+  left: 150px;
+  top: 200px;
+  color: #8B008B;
+}
+
+.back {
+  font-family: Tahoma, sans-serif;
+  color:#118ab2 ;
+  text-align: center;
+  margin: 30px;
+  outline-color: #d6cf06;
+  outline-style: dotted;
+}
+
+.wish{
+  color:#8B008B;
+}
+
+
